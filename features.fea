@@ -1,0 +1,8 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+feature calt {
+	lookup w {
+		sub [longs f f_f longs_longs] w' by w.alt;
+	} w;
+} calt;

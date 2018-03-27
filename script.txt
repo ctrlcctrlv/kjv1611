@@ -1,0 +1,10 @@
+import fontforge
+
+font = fontforge.activeFont()
+
+font.selection.select(("unicode","ranges"),0xE000,0xF8FF)
+font.clear()
+font.selection.all()
+font.removeOverlap()
+font.mergeFeature("features.fea")
+#font.generate("KJV1611.A.otf")
