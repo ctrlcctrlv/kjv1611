@@ -6,3 +6,16 @@ feature calt {
 		sub [longs f f_f longs_longs] w' by w.alt;
 	} w;
 } calt;
+
+feature liga {
+    lookup default_ligatures {
+        sub f f by f_f;
+        sub f i by f_i;
+        sub f l by f_l;
+        sub L O R D by L_O_R_D;
+        sub longs h by longs_h;
+        sub longs i by longs_i;
+        sub longs longs by longs_longs;
+        sub longs t by longs_t;
+    } default_ligatures;
+} liga;
