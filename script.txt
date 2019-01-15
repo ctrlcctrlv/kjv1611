@@ -1,11 +1,18 @@
 import fontforge
+import spaces
 
 font = fontforge.activeFont()
+
+for k in spaces.Spaces.keys():
+    font.createChar(k)
+
+for k, v in spaces.Spaces.items():
+    font[k].width = v
 
 font.selection.select(("unicode","ranges"),0xE000,0xF8FF)
 font.clear()
 font.selection.all()
 font.unlinkReferences()
 font.removeOverlap()
-font.mergeFeature("features.fea")
+#font.mergeFeature("features.fea")
 #font.generate("KJV1611.A.otf")
