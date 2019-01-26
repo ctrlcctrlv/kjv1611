@@ -1,5 +1,48 @@
 languagesystem DFLT dflt;
 languagesystem latn dflt;
+languagesystem grek dflt;
+languagesystem cyrl dflt;
+
+@lower_no_s = [a b c d e f g h i j k l m n o p q r t u v w x y z];
+@lower = [a b c d e f g h i j k l m n o p q r s t u v w x y z];
+@upper = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z];
+#@B
+@D = [D Eth Dcaron Dcroat D.alt];
+@P = [P Thorn];
+#@b
+@d = [d dcroat dcaron eth];
+@h = [h hcircumflex hbar];
+@o = [o ograve oacute ocircumflex otilde odieresis oslash omacron obreve ohungarumlaut oslashacute];
+@p = [p thorn];
+@w = [w wcircumflex wgrave wacute];
+@y = [y yacute ydieresis ycircumflex ygrave];
+
+feature hist {
+    lookup simplecases {
+        sub V' by U;
+        sub I' by J;
+    } simplecases;
+
+    # In the KJV, the initial `v` was always `v` but medial `v` became `u`
+    lookup uv {
+      sub [@lower @upper] v' by u;
+    } uv;
+    
+    lookup longsfix1 {
+        sub s' @lower_no_s by longs;
+        sub s' s by longs;
+    } longsfix1;
+    
+    lookup longsfix2 {
+        # sub longs longs' @lower_no_s by s;
+        sub longs' [f f_f] by s;
+        sub [f f_f] longs' by s;
+    } longsfix2;
+    
+    lookup rrotundafix1 {
+        sub [B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
+    } rrotundafix1;
+} hist;
 
 feature calt {
 	lookup w {
@@ -17,5 +60,7 @@ feature liga {
         sub longs i by longs_i;
         sub longs longs by longs_longs;
         sub longs t by longs_t;
+        sub [y thorn] uni0364 by y_e;
+        sub [y thorn] uni036d by y_t;
     } default_ligatures;
 } liga;
