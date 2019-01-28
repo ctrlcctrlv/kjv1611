@@ -38,7 +38,7 @@ feature hist {
         sub longs' [f f_f] by s;
         sub [f f_f] longs' by s;
     } longsfix2;
-    
+
     lookup rrotundafix1 {
         sub [B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
     } rrotundafix1;
@@ -58,8 +58,11 @@ feature liga {
         sub L O R D by L_O_R_D;
         sub longs h by longs_h;
         sub longs i by longs_i;
-        sub longs longs by longs_longs;
         sub longs t by longs_t;
+        sub longs longs by longs_longs;
+        sub longs longs h by longs_longs_h;
+        sub longs longs t by longs_longs_t;
+        sub longs longs i by longs_longs_i;
         sub [y thorn] uni0364 by y_e;
         sub [y thorn] uni036d by y_t;
     } default_ligatures;
