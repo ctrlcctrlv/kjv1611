@@ -5,9 +5,8 @@ When it comes to advanced typographical features, FontForge's UI is rarely condu
 To build from development SFD:
 
 * Run fontforge as `PYTHONPATH=. fontforge KJV1611.sfd`
-* Re-encode as UTF-8 BMP
-* Merge `features.fea` file
 * Execute `script.txt`
+* Merge `features.fea` file
 * Generate `.otf` font
 * Exit _without saving!_
 * Run `post-build.sh`

@@ -3,6 +3,8 @@ import spaces
 
 font = fontforge.activeFont()
 
+font.encoding = "UnicodeBMP"
+
 for k in spaces.Spaces.keys():
     font.createChar(k)
 
