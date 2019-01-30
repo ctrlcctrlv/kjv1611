@@ -67,3 +67,18 @@ feature liga {
         sub [y thorn] uni036d by y_t;
     } default_ligatures;
 } liga;
+
+feature salt {
+    lookup s1 {
+        sub el by el.alt;
+        sub D by D.alt;
+        sub germandbls by germandbls.alt;
+        sub Q by Q.alt;
+        sub v by v.alt;
+        sub w by w.alt;
+        sub Y by Y.alt;
+        sub Z by Z.alt;
+        sub two by two.alt;
+        sub zero by zero.alt;
+    } s1;
+} salt;
