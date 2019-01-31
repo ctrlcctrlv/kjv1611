@@ -5,7 +5,7 @@ King James Verſion 1611 Font: Digital Reſtoration
 
 ![Sample 1](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/sample1-01.jpg)
 ![Sample 2](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/sample2-01.jpg)
-![Info](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/info.png)
+![Info](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/info/info.png)
 
 ## Cool links to more information about the King James Bible
 
@@ -16,6 +16,15 @@ King James Verſion 1611 Font: Digital Reſtoration
 ## How did I make this?
 
 I used a microscope and a reproduction King James Bible skillfully crafted by [GreatSite.com](http://greatsite.com/facsimile-reproductions/kingjames-1611.html). After that it was just a matter of tracing in Adobe Illustrator and importing to FontForge. You can see the raw image output of my microscope and all my Illustrator traces in the "KJV glyphs" directory. 
+
+## How can I use the OpenType features?
+
+Many programs support the OpenType features this font provides.
+
+* XeTeX supports all of them, you can see a good example of how to use XeLaTeX with this font in `info/info.tex`
+* Adobe software supports most of the features
+* You can enable features in LibreOffice by name by setting the font to e.g. `KJV1611:hist` where `hist` is the feature you want to enable, in this case Historical Forms.
+* Inkscape supports the kerning and contextual alternates.
 
 ## The below text is for screen readers and search engines
 

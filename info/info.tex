@@ -1,0 +1,35 @@
+\documentclass[border=15pt]{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec}
+\setmainfont[HyphenChar=8208, Style=Historic,Kerning=On]{KJV1611}
+\newfontfamily{\nohistkjv}[HyphenChar=8208]{KJV1611}
+\newfontfamily{\altkjv}[HyphenChar=8208, Style=Alternate]{KJV1611}
+\newfontfamily{\nokernkjv}[RawFeature={-kern},HyphenChar=8208, Kerning=Off, Style=Historic]{KJV1611}
+\newfontfamily{\nocaltkjv}[RawFeature={-calt},HyphenChar=8208, Kerning=Off, Style=Historic]{KJV1611}
+\newfontfamily{\gara}{EB Garamond}
+\begin{document}
+\begin{minipage}{4in}
+\setlength{\parindent}{10pt}
+\setlength{\parskip}{3ex plus 0.5ex minus 0.2ex}
+{\Huge{King James Version 1611 Font: Digital Restoration}}
+
+This font is a libre digital recreation of the font found in one of the most famous books in the English language, the 1611 King James Version of the Holy Bible. It is licensed under the S.J.L Open Font License.
+
+This font can be used to typeset both in the medieval spelling style, or in the modern style. The alphabet is not static ; some glyphs that we use today did not exist in the 17th century. For example, capital “{\gara{V}}”, capital “{\gara{I}}”, and the “{\gara{@}}” sign. Based on other blackletter fonts made by contemporaries of the scribes, and other modern recreations of other blackletter fonts, I made up glyphs for these modern symbols/letters : {\nohistkjv{V, I, @.}}
+
+The King James Bible was typeset by publishing houses contracted by Robert Barker, who at the time was the King’s Publisher. Barker had a monopoly on the printing of the King James Bible, as well as the Geneva Bible and Bishop’s Bible. There seems to be a bit of a mystery around who actually drew the font : it looks very similar to a font called alternately “Pica Textura” or “Texte Flamand”, sold by the publishing house of one Mr. Hendrik van der Keere. However, he died in 1580 : some letters, such as “A” and “Y” are notably different than how he would haue written them. Another possibility is that the font was made by Wolfgang Hopyl. A third possibility still is that the font was made by Barker or an associate of his in imitation of the styles of those two men, as works printed by them were popular in England at the time.
+
+Whatever the truth, the font is beautiful, and I hope to have prouided a faithful restoration.
+
+OpenType Features :
+    \begin{itemize}
+        \item Ligatures: affiliate, assistance
+\item Contextual Substitution: {\nocaltkjv{switch}} $\mapsto$ switch
+\item Alternate Characters: Z $\mapsto$ {\altkjv{Z}}
+\item Kerning: {\nokernkjv{switch}} $\mapsto$ switch
+\item Historical Forms: {\nohistkjv{sword}} $\mapsto$ sword
+\item Extended Character Set for Foreign Tongues: {\color{BrickRed}\nohistkjv{«alelölülő, árvíztűrő tükörfúrógép, cañón, aŭ ĉefŝanĝaĵo, Я люблю типографику, Μου αρέσει η τυπογραφία.»}}
+    \end{itemize}
+    I recommend pairing this font with {\gara{E.B. Garamond.}}
+\end{minipage}
+\end{document}
