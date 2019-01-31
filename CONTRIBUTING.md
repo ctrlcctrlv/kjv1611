@@ -6,7 +6,6 @@ To build from development SFD:
 
 * Run fontforge as `PYTHONPATH=. fontforge KJV1611.sfd`
 * Execute `script.txt`
-* Merge `features.fea` file
 * Generate `.otf` font
 * Exit _without saving!_
 * Run `post-build.sh`
