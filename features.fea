@@ -6,7 +6,7 @@ languagesystem cyrl dflt;
 @lower_no_s = [a b c d e f g h i j k l m n o p q r t u v w x y z];
 @lower = [a b c d e f g h i j k l m n o p q r s t u v w x y z];
 @upper = [A B C D E F G H I J K L M N O P Q R S T U V W X Y Z];
-#@B
+@B = [B B.alt];
 @D = [D Eth Dcaron Dcroat D.alt];
 @P = [P Thorn];
 #@b
@@ -40,7 +40,7 @@ feature hist {
     } longsfix2;
 
     lookup rrotundafix1 {
-        sub [B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
+        sub [@B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
     } rrotundafix1;
 } hist;
 
@@ -80,5 +80,7 @@ feature salt {
         sub Z by Z.alt;
         sub two by two.alt;
         sub zero by zero.alt;
+        sub B by B.alt;
+        sub u by u.alt;
     } s1;
 } salt;
