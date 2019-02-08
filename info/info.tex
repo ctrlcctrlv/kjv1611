@@ -5,7 +5,8 @@
 \newfontfamily{\nohistkjv}[HyphenChar=8208]{KJV1611}
 \newfontfamily{\altkjv}[HyphenChar=8208, Style=Alternate]{KJV1611}
 \newfontfamily{\nokernkjv}[RawFeature={-kern},HyphenChar=8208, Kerning=Off, Style=Historic]{KJV1611}
-\newfontfamily{\nocaltkjv}[RawFeature={-calt},HyphenChar=8208, Kerning=Off, Style=Historic]{KJV1611}
+\newfontfamily{\nocaltkjv}[RawFeature={-calt},HyphenChar=8208, Style=Historic]{KJV1611}
+\newfontfamily{\noligakjv}[RawFeature={-liga},HyphenChar=8208, Style=Historic]{KJV1611}
 \newfontfamily{\gara}{EB Garamond}
 \begin{document}
 \begin{minipage}{4in}
@@ -25,9 +26,9 @@ Whatever the truth, the font is beautiful, and I hope to have prouided a faithfu
 
 OpenType Features :
     \begin{itemize}
-        \item Ligatures: affiliate, assistance
+        \item Ligatures: {\noligakjv{affiliate, assistance}} $\mapsto$ a{\color{BrickRed}ffi}liate, a{\color{BrickRed}ssi}stance
 \item Contextual Substitution: {\nocaltkjv{switch}} $\mapsto$ switch
-\item Alternate Characters: Z $\mapsto$ {\altkjv{Z}}
+\item Alternate Characters: ZYQ20 $\mapsto$ {\altkjv{ZYQ20}}
 \item Kerning: {\nokernkjv{switch}} $\mapsto$ switch
 \item Historical Forms: {\nohistkjv{sword}} $\mapsto$ sword
 \item Extended Character Set for Foreign Tongues: {\color{BrickRed}\nohistkjv{«alelölülő, árvíztűrő tükörfúrógép, cañón, aŭ ĉefŝanĝaĵo, Я люблю типографику, Μου αρέσει η τυπογραφία.»}}
