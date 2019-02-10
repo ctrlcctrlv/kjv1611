@@ -1,7 +1,6 @@
 import fontforge
+font = fontforge.open("KJV1611.sfd")
 import spaces
-
-font = fontforge.activeFont()
 
 font.encoding = "UnicodeBMP"
 
@@ -17,4 +16,4 @@ font.selection.all()
 font.unlinkReferences()
 font.removeOverlap()
 font.mergeFeature("features.fea")
-#font.generate("KJV1611.A.otf")
+font.generate("KJV1611.otf", flags=("opentype", "old-kern", "no-hints", "no-flex", "winkern"))
