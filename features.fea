@@ -83,5 +83,8 @@ feature salt {
         sub B by B.alt;
         sub u by u.alt;
         sub H by H.alt;
+        sub E by E.alt;
+        sub C by C.alt;
+        sub A by A.alt;
     } s1;
 } salt;
