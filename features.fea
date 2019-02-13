@@ -86,5 +86,37 @@ feature salt {
         sub E by E.alt;
         sub C by C.alt;
         sub A by A.alt;
+        sub d by d.alt;
+        sub g by g.alt;
     } s1;
 } salt;
+
+feature ss01 {
+    lookup s1 {
+        sub el by el.alt;
+        sub D by D.alt;
+        sub germandbls by germandbls.alt;
+        sub Q by Q.alt;
+        sub v by v.alt;
+        sub w by w.alt;
+        sub Y by Y.alt;
+        sub Z by Z.alt;
+        sub two by two.alt;
+        sub zero by zero.alt;
+        sub B by B.alt;
+        sub u by u.alt;
+        sub H by H.alt;
+        sub E by E.alt;
+        sub C by C.alt;
+        sub A by A.alt;
+        sub d by d.alt;
+        sub g by g.alt;
+    } s1;
+} ss01;
+
+feature ss02 {
+    lookup s1 {
+        sub B by B.alt2;
+        sub E by E.alt2;
+    } s1;
+} ss02;
