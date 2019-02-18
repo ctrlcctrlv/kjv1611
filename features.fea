@@ -65,6 +65,7 @@ feature liga {
         sub longs longs i by longs_longs_i;
         sub [y thorn] uni0364 by y_e;
         sub [y thorn] uni036d by y_t;
+        sub w uni036d by w_t;
     } default_ligatures;
 } liga;
 
@@ -88,35 +89,18 @@ feature salt {
         sub A by A.alt;
         sub d by d.alt;
         sub g by g.alt;
+        sub W by W.alt;
     } s1;
 } salt;
 
 feature ss01 {
-    lookup s1 {
-        sub el by el.alt;
-        sub D by D.alt;
-        sub germandbls by germandbls.alt;
-        sub Q by Q.alt;
-        sub v by v.alt;
-        sub w by w.alt;
-        sub Y by Y.alt;
-        sub Z by Z.alt;
-        sub two by two.alt;
-        sub zero by zero.alt;
-        sub B by B.alt;
-        sub u by u.alt;
-        sub H by H.alt;
-        sub E by E.alt;
-        sub C by C.alt;
-        sub A by A.alt;
-        sub d by d.alt;
-        sub g by g.alt;
-    } s1;
+    lookup s1;
 } ss01;
 
 feature ss02 {
-    lookup s1 {
+    lookup s2 {
         sub B by B.alt2;
         sub E by E.alt2;
-    } s1;
+        sub w by w.alt2;
+    } s2;
 } ss02;
