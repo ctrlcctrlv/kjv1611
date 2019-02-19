@@ -18,30 +18,27 @@ languagesystem cyrl dflt;
 @y = [y yacute ydieresis ycircumflex ygrave];
 
 feature hist {
-    lookup simplecases {
+    lookup hists {
+        # There was no capital V or I in 1611
         sub V' by U;
         sub I' by J;
-    } simplecases;
 
-    # In the KJV, the initial `v` was always `v` but medial `v` became `u`
-    lookup uv {
-      sub [@lower @upper] v' by u;
-    } uv;
-    
-    lookup longsfix1 {
+        # In the KJV, the initial `v` was always `v` but medial `v` became `u`
+        sub [@lower @upper] v' by u;
+        
+        # For long s
         sub s' @lower_no_s by longs;
         sub s' s by longs;
-    } longsfix1;
-    
-    lookup longsfix2 {
-        # sub longs longs' @lower_no_s by s;
+
+        # For R rotunda
+        sub [@B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
+    } hists;   
+
+    # This needs to be in a separate lookup or it will be ignored.
+    lookup longsfix {
         sub longs' [f f_f] by s;
         sub [f f_f] longs' by s;
-    } longsfix2;
-
-    lookup rrotundafix1 {
-        sub [@B @D @P b @d @h @o @p @w @y] r' by r.rotunda;
-    } rrotundafix1;
+    } longsfix;
 } hist;
 
 feature calt {
@@ -94,13 +91,30 @@ feature salt {
 } salt;
 
 feature ss01 {
+    featureNames {
+        name "All stylistic alternates enabled";
+    };
+
     lookup s1;
 } ss01;
 
 feature ss02 {
+    featureNames {
+        name "Historically accurate B and E, second alternate `w`";
+    };
+
     lookup s2 {
         sub B by B.alt2;
         sub E by E.alt2;
         sub w by w.alt2;
     } s2;
 } ss02;
+
+feature ss03 {
+    featureNames {
+        name "Historical Forms";
+    };
+
+    lookup hists;
+    lookup longsfix;
+} ss03;
