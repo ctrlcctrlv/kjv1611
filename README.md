@@ -3,8 +3,7 @@ King James Verſion 1611 Font: Digital Reſtoration
 
 [Click to download font](https://github.com/ctrlcctrlv/kjv1611/raw/master/KJV1611.otf)
 
-![Sample 1](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/sample1-01.jpg)
-![Sample 2](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/sample2-01.jpg)
+![Sample 2](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/info/behold.png)
 ![Info](https://raw.githubusercontent.com/ctrlcctrlv/kjv1611/master/info/info.png)
 
 ## Cool links to more information about the King James Bible

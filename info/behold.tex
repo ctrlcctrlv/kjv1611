@@ -1,0 +1,35 @@
+\documentclass[border=15pt]{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontspec}
+\usepackage{background}
+\setmainfont[HyphenChar=8208, Style=Historic,Kerning=On]{KJV1611}
+\newfontfamily{\gara}{EB Garamond}
+
+\backgroundsetup{
+    scale=1,
+    color=black,
+    opacity=0.75,
+    contents={%
+        \includegraphics[%
+            height=\paperheight, % double the vert. margin
+            width=\paperwidth,    % double the horiz. margin
+            ]{paper}
+    },
+    angle=0,
+    hshift=1in,
+    vshift=1in,
+    %position = current page.south west,
+    %nodeanchor = south west,
+}
+
+\begin{document}
+\BgThispage{}
+\begin{minipage}{1.2in}
+\setlength{\parindent}{10pt}
+\setlength{\parskip}{3ex plus 0.5ex minus 0.2ex}
+    \begin{center}
+{\huge{Behold!}}\\
+And God said, \\ Let there be light : and there was light.
+    \end{center}
+\end{minipage}
+\end{document}
