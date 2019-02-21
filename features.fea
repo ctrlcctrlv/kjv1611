@@ -60,9 +60,9 @@ feature liga {
         sub longs longs h by longs_longs_h;
         sub longs longs t by longs_longs_t;
         sub longs longs i by longs_longs_i;
-        sub [y thorn] uni0364 by y_e;
-        sub [y thorn] uni036d by y_t;
-        sub w uni036d by w_t;
+        sub [y thorn] combeabove by y_e;
+        sub [y thorn] combtabove by y_t;
+        sub w combtabove by w_t;
     } default_ligatures;
 } liga;
 
