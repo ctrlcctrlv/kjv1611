@@ -41,6 +41,15 @@ feature hist {
     } longsfix;
 } hist;
 
+feature kern {
+    lookup feakerns {
+        pos [longs longs_longs] longs_longs -185;
+        pos [longs longs_longs] longs -125;
+        pos [longs longs_longs] k -150;
+        pos [longs longs_longs] b -150;
+    } feakerns;
+} kern;
+
 feature calt {
 	lookup w {
 		sub [longs f f_f longs_longs] w' by w.alt;
@@ -56,10 +65,12 @@ feature liga {
         sub longs h by longs_h;
         sub longs i by longs_i;
         sub longs t by longs_t;
+        sub longs l by longs_l;
         sub longs longs by longs_longs;
         sub longs longs h by longs_longs_h;
-        sub longs longs t by longs_longs_t;
         sub longs longs i by longs_longs_i;
+        sub longs longs t by longs_longs_t;
+        sub longs longs l by longs_longs_l;
         sub [y thorn] combeabove by y_e;
         sub [y thorn] combtabove by y_t;
         sub w combtabove by w_t;
